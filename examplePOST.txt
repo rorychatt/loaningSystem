@@ -1,0 +1,39 @@
+###
+GET http://localhost:8080/get_all_customers
+
+###
+
+POST http://localhost:8080/register_customer
+Content-Type: application/json
+
+{
+  "id": "ab-1234-cde"
+}
+###
+POST http://localhost:8080/register_manager?username=ElvisPresley
+
+###
+GET http://localhost:8080/get_all_managers
+
+###
+POST http://localhost:8080/create_loan_approval_request
+Content-Type: application/json
+
+{
+  "customerId": "ab-1234-cde",
+  "loanAmount": "4000",
+  "managers": ["elPablo", "ElvisPresley", "bankk"]
+
+}
+
+###
+GET http://localhost:8080/get_all_loans
+
+###
+POST http://localhost:8080/make_decision?username=ElvisPresley&customerId=ab-1234-cde&decision=true
+
+###
+GET http://localhost:8080/get_statistics
+
+###
+POST http://localhost:8080/set_statistics_time?time=120
